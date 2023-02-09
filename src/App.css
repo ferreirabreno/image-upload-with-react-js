@@ -1,0 +1,16 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  padding: 10px;
+  background-color: gray;
+}
+
+.sidebar-item {
+  padding: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
