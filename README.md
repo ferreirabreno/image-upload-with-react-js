@@ -15,13 +15,39 @@ npm install -g create-react-app.
 npx create-react-app my-app --template typescript.
 ```
 
-5. Configure the `tsconfig.json` file: This file is used to configure TypeScript for your project.
+3. Configure the `tsconfig.json` file: This file is used to configure TypeScript for your project.
 ```json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
 ```
 
 # TODO
 
-- [ ] Create react project
+- [x] Create react project
 - [ ] Create form to handle image upload
 - [ ] Consume some API to storage files
 - [ ] Handle parallel uploads
