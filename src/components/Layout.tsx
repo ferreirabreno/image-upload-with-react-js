@@ -3,18 +3,25 @@ import MainContent from "./MainContent"
 import Sidebar from "./Sidebar"
 
 interface LayoutProps { 
-    lightMode: boolean
+    lightMode?: boolean
 }
 
 class Layout extends React.Component<LayoutProps> {
+    state = {
+        lightMode: false
+    }
 
+    toggleStyleMode = () => {
+        this.setState({
+            lightMode: !this.state.lightMode
+        })
+    }
+    
     render(): React.ReactNode {
-        const { lightMode } = this.props
         return (
-            <div>
-                <Sidebar lightMode={lightMode} />
-                <MainContent lightMode={lightMode}/>
-                <h1>Hello World!</h1>
+            <div className="layout">
+                <Sidebar lightMode={this.state.lightMode} toogleStyleMode={this.toggleStyleMode} />
+                <MainContent lightMode={this.state.lightMode}/>
             </div>
         )
     }

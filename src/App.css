@@ -1,3 +1,18 @@
+.dark-mode {
+  background-color: #444;
+  color: #fff;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #444;
+}
+
+.main-content {
+  height: 100vh;
+  width: 100%;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -6,11 +21,22 @@
   position: fixed;
   height: 100vh;
   padding: 10px;
-  background-color: gray;
+  border-right: 1px solid #444;
+}
+
+.sidebar.dark-mode{
+  border-right: 1px solid #999;
 }
 
 .sidebar-item {
   padding: 10px;
   font-size: 1.4rem;
   cursor: pointer;
+  background-color: inherit;
+  color: inherit;
+}
+
+.sidebar-item-icon {
+  background-color: inherit;
+  color: inherit;
 }
