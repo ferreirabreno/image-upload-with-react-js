@@ -18,8 +18,8 @@ class Sidebar extends React.Component<SidebarProps> {
         const { lightMode, toogleStyleMode } = this.props
         return (
             <div className={`sidebar ${evaluateLightMode(lightMode)}`}>
-                <SidebarItem name="home" icon={<FaHome className="sidebar-item-icon"/>} action={() => {}} />
                 <SidebarItem name="light-mode" icon={this.toogleStyleModeIcon(lightMode)} action={toogleStyleMode} />
+                <SidebarItem name="home" icon={<FaHome className="sidebar-item-icon"/>} action={() => {}} />
                 <SidebarItem name="logout" icon={<FaSignOutAlt className="sidebar-item-icon"/>} action={() => {}} />
             </div>
         )

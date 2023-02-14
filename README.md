@@ -48,6 +48,6 @@ npx create-react-app my-app --template typescript.
 # TODO
 
 - [x] Create react project
-- [ ] Create form to handle image upload
+- [x] Create form to handle image upload
 - [ ] Consume some API to storage files
 - [ ] Handle parallel uploads
