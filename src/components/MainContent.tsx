@@ -7,6 +7,17 @@ interface MainContentProps {
  }
 
 class MainContent extends React.Component<MainContentProps> {
+
+    onImagesUpload = async (images: FileList | null) => {
+        if (!images) return;
+
+        try {
+            // const responses = await Promise.all()
+        } catch (error) {
+            console.error('Error uploading images:', error)
+        }
+    }
+
     render(): React.ReactNode {
         const { lightMode } = this.props
         return (
